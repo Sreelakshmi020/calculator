@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .calculator{
+            width: 250px;
+            height: 350px;
+            text-align: center;
+            margin-top: 100px;
+            padding: 40px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; ;
+
+        }
+        .calculator_input input{
+            padding: 10px;
+            border: none;
+            background-color: rgb(234, 223, 223);
+        }
+        .calculator_btns{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 30px;
+        }
+        .calculator_btn button{
+           background-color:hotpink;
+           border-radius: 10px;
+           border: none;
+           padding: 8px;
+          font-size: 25px;
+        }
+        .calculator_result{
+            text-align: center;
+            font-family:sans-serif;
+            font-size: 20px;
+            color:black;
+            
+        }
+        h1{
+            font-size:35px;
+            color: coral;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+            
+        }
+
+        
+
+        
+    </style>
+</head>
+
+<body>
+    
+  <div class="calculator">
+    <h1>Calculator</h1>
+    <div class="calculator_input">
+        <input type="text" name="" id="num1" onfocus="this.value=''" placeholder="number1">
+        <br>
+        <br>
+        <input type="text" name="" id="num2" onfocus="this.value=''" placeholder="number2">
+
+    </div>
+    <div class="calculator_btns">
+        <div class="calculator_btn"><button onclick="add()">+</button></div>
+        <div class="calculator_btn"><button onclick="sub()">-</button></div>
+        <div class="calculator_btn"><button onclick="div()">/</button></div>
+        <div class="calculator_btn"><button onclick="clear()">c</button></div>
+        
+
+    </div>
+    <div class="calculator_result">
+        <h2 id="result">Your result display here</h2>
+    </div>
+  </div>  
+  <script>
+    function add(){
+        let a=document.getElementById("num1").value   
+        console.log(a)
+        let b=document.getElementById("num2").value   
+        console.log(b)
+
+        let sum=parseInt(a)+parseInt(b)
+        document.getElementById("result").innerHTML=sum
+         }
+         function sub(){
+        let a=document.getElementById("num1").value   
+        console.log(a)
+        let b=document.getElementById("num2").value   
+        console.log(b)
+     
+        let sum=parseInt(a)-parseInt(b)
+        document.getElementById("result").innerHTML=sum
+         }
+         function div(){
+        let a=document.getElementById("num1").value   
+        console.log(a)
+        let b=document.getElementById("num2").value   
+        console.log(b)
+     
+        let sum=parseInt(a)/parseInt(b)
+        document.getElementById("result").innerHTML=sum
+         }
+         function clear(){
+            document.getElementById('num1').value = ''
+            document.getElementById('num2').value = ''
+         }
+  </script>
+
+ 
+</body>
+
+</html>
